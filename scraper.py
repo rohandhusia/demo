@@ -13,7 +13,7 @@ class Scraper:
         page = requests.get(url=url, headers=header)
         soup = BeautifulSoup(page.content, 'html.parser')
         title = soup.find(id="productTitle").get_text()
-        t = soup.find(id="pd").get
+        # t = soup.find(id="pd").get
         price = soup.find(id="priceblock_ourprice").get_text()
         # print("Amazon:", title.strip())
         # print("Price:", amazon_price)
